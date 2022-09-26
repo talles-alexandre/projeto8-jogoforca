@@ -1,8 +1,11 @@
 import forca0 from "./assets/forca0.png";
 
 import alfabeto from "./alfabeto";
+import { useState } from "react";
 
 export default function App() {
+  const [habilitado, setHabilitado] = useState(false);
+  const [erros, setErros] = useState(0);
   return (
     <>
       <div className="top">
@@ -11,7 +14,12 @@ export default function App() {
         </div>
         <div className="lado_direito">
           <div className="escolherPalavra">
-            <button data-identifier="choose-word">Escolher Palavras</button>
+            <button
+              data-identifier="choose-word"
+              onClick={() => setHabilitado(true)}
+            >
+              Escolher Palavras
+            </button>
           </div>
 
           <div className="word" data-identifier="word">
@@ -25,7 +33,7 @@ export default function App() {
           {alfabeto.map((l, index) => (
             <button
               data-identifier="letter"
-              className="habilitado"
+              className={habilitado == true ? "habilitado" : "desabilitado"}
               onClick={() => {}}
             >
               {l}
@@ -36,7 +44,7 @@ export default function App() {
 
       <div className="footer">
         <span> Já sei a palavra!</span>
-        <input data-identifier="type-guess"></input>
+        {habilitado == true ? <input></input> : <input disabled></input>}
         <button data-identifier="guess-button">Chutar</button>
       </div>
     </>
