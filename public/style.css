@@ -4,28 +4,81 @@
 
 body {
   background-color: #fafafa;
-  margin: 54px 0 0;
   font-family: "Roboto", sans-serif;
   color: #262626;
   font-weight: 400;
   font-size: 14px;
+  margin-top: 10px;
 }
 img {
-  width: 500px;
-  height: 550px;
+  width: 350px;
+  height: 380px;
 }
 .top {
   display: flex;
-
   margin-left: 10px;
 }
 
 .escolherPalavra button {
-  margin-top: 50px;
+  margin-top: 25px;
   margin-left: 250px;
-  width: 195px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   background-color: #5aaf60;
   color: #fafafa;
   border-radius: 5%;
+}
+.alfabeto {
+  display: flex;
+  margin-left: 60px;
+}
+
+.letras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 660px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.letras button {
+  margin: 3px 10px;
+  width: 30px;
+  height: 25px;
+}
+
+.desabilitado {
+  background-color: #9faab5;
+  color: black;
+}
+.habilitado {
+  background-color: #e1ecf4;
+  color: #397daa;
+}
+.word {
+  margin-bottom: 30px;
+}
+.word span {
+  font-size: 30px;
+}
+.lado_direito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+}
+.footer input {
+  margin-left: 10px;
+}
+
+.footer button {
+  background-color: #e1ecf4;
+  width: 70px;
+  height: 25px;
+  margin-left: 5px;
 }
